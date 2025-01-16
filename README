@@ -1,16 +1,126 @@
-PadBuster - Automated script for performing Padding Oracle attacks
+# 🔒 PadBuster Enhanced Edition
 
-Author: Brian Holyfield - Gotham Digital Science (labs@gdssecurity.com)
+<div align="center">
+  <img src="assets/banner.svg" alt="PadBuster Banner" width="600px">
+  
+  [![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](LICENSE)
+  [![Version](https://img.shields.io/badge/version-0.3.3-green.svg)](https://github.com/yourusername/padbuster)
+  [![Perl](https://img.shields.io/badge/perl-%3E%3D5.10-yellow.svg)](https://www.perl.org/)
+</div>
 
-Credits to J.Rizzo and T.Duong for providing proof of concept web exploit
-techniques and S.Vaudenay for initial discovery of the attack. Credits also
-to James M. Martin (research@esptl.com) for sharing proof of concept exploit
-code for performing various brute force attack techniques.
+<p align="center">An advanced padding oracle attack tool with enhanced terminal interface</p>
 
-PadBuster is a Perl script for automating Padding Oracle Attacks. PadBuster  
-provides the capability to decrypt arbitrary ciphertext, encrypt arbitrary plaintext, 
-and perform automated response analysis to determine whether a request is vulnerable 
-to padding oracle attacks.
+---
 
-PadBuster is released under the Apache License, version 2.0 (Apache-2.0)
-https://opensource.org/licenses/Apache-2.0
+## ✨ Features
+
+- 🎨 Modern terminal interface with animations
+- 🌈 Color-coded menus and status indicators
+- 📊 Real-time progress tracking
+- 🔧 Interactive settings management
+- 📝 Comprehensive logging
+- 🔍 Multiple attack modes
+
+## 🚀 Quick Start
+
+```bash
+# Clone the repository
+git clone https://github.com/yourusername/padbuster.git
+
+# Install dependencies
+cpan Term::ANSIColor Term::ReadKey
+
+# Run PadBuster
+./padbuster.pl URL EncryptedSample BlockSize
+```
+
+## 📋 Usage Examples
+
+### Basic Decryption
+```bash
+./padbuster.pl https://target.com/app encrypted_data 16
+```
+
+### With Authentication
+```bash
+./padbuster.pl https://target.com/app encrypted_data 16 -auth user:pass
+```
+
+## 🎯 Attack Modes
+
+| Mode | Description | Usage |
+|------|-------------|-------|
+| 🔓 Decrypt | Decrypt encrypted values | Basic mode |
+| 🔒 Encrypt | Encrypt custom data | Use -plaintext |
+| 🔨 Brute Force | Force decrypt unknown data | Use -bruteforce |
+
+## 🔧 Configuration
+
+The tool can be configured using various command-line options:
+
+```bash
+Options:
+  -auth [user:pass]    : HTTP Basic Authentication
+  -proxy [host:port]   : Use HTTP/S Proxy
+  -cookies [data]      : Custom cookies
+  -headers [data]      : Custom headers
+```
+
+## 🎨 Themes
+
+PadBuster Enhanced Edition comes with multiple terminal themes:
+
+- 🌞 Light Theme
+- 🌙 Dark Theme
+- 🌈 Rainbow Theme
+- 🎨 Custom Theme
+
+## 📜 License
+
+Licensed under the Apache License, Version 2.0. See [LICENSE](LICENSE) for details.
+
+## 🤝 Contributing
+
+Contributions are welcome! Please read our [Contributing Guidelines](CONTRIBUTING.md) first.
+
+<style>
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  h1 {
+    color: #2962FF;
+    text-align: center;
+    font-size: 2.5em;
+  }
+  
+  h2 {
+    color: #0D47A1;
+    border-bottom: 2px solid #2962FF;
+    padding-bottom: 10px;
+  }
+  
+  code {
+    background: #F5F5F5;
+    padding: 2px 5px;
+    border-radius: 3px;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+  }
+  
+  th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #E0E0E0;
+  }
+  
+  th {
+    background: #E3F2FD;
+  }
+</style>
